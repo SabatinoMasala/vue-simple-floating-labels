@@ -1,9 +1,9 @@
 {
   "name": "vue-simple-floating-labels",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Simple floating labels for Vue",
   "author": "Sabatino Masala <Masalasabatino@gmail.com>",
-  "private": true,
+  "main": "dist/vue-simple-floating-labels.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",

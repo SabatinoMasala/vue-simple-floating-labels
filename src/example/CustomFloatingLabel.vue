@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import FloatingLabel from './components/FloatingLabel'
+    import FloatingLabel from '../components/FloatingLabel'
     export default {
         props: ['config'],
         components: {

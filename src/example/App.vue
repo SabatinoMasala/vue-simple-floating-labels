@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    import FloatingLabel from './components/FloatingLabel'
+    import FloatingLabel from '../components/FloatingLabel'
     import CustomFloatingLabel from './CustomFloatingLabel'
     export default {
         components: {
@@ -42,7 +42,7 @@
 
 <style lang="scss">
 
-    @import './style/_variables.scss';
+    @import '../style/variables';
 
     body {
         font-family: SFUIText-Regular;
