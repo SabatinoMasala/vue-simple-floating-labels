@@ -57,8 +57,12 @@
                 return this.config.label.toLowerCase();
             },
             accessibilityStyle() {
+                let color = this.settings.color.lineColor;
+                if (this.settings.hasError) {
+                    color = this.settings.color.errorColor;
+                }
                 return {
-                    'background-color': this.settings.color.lineColor
+                    'background-color': color
                 }
             },
             labelColor() {
