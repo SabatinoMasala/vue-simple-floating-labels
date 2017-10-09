@@ -42,6 +42,9 @@ Input field should have a line below it (for accessibility reasons)
 ### Scale (default `true`)
 Turn scale animation on or off
 
+### HasError (default `false`)
+Whether or not to apply the error class
+
 ### labelOffset
 Set the top and left property of the label.
 
@@ -52,6 +55,15 @@ Set the top and left property of the label.
     left: 8
 }
 ``` 
+### Classes
+Custom classes.
+
+**Defaults:**
+```
+{
+    error: 'has-error'
+}
+``` 
 
 ### color
 Specify the focusColor, lineColor and blurredColor.
@@ -60,15 +72,23 @@ Specify the focusColor, lineColor and blurredColor.
 ```
 {
     focusColor: '#128CED',
+    errorColor: '#ff0000',
     lineColor: '#128CED',
     blurredColor: 'rgba(3, 23, 40, 0.34)'
 }
 ```
 
+## Events
+```
+clear: When the user presses the clear button (when using v-model you should clear the value)
+focus: On focus
+blur: On blur
+input: On input
+```
+
 ## TODO
 * Textarea
-* Options
-* Integrate with vee-validate
+* Select
 
 ## Credit
 

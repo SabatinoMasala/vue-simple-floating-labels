@@ -758,11 +758,15 @@ module.exports = function normalizeComponent (
             return false;
         },
         containerClasses: function containerClasses() {
-            return {
+            var classes = {
                 'has-line': this.settings.line,
                 'input__container--focus': this.hasFocus,
                 'input__container--content': this.hasContent
             };
+            if (this.settings.hasError) {
+                classes[this.settings.classes.error] = true;
+            }
+            return classes;
         },
         labelName: function labelName() {
             if (this.config.name !== undefined) {
@@ -775,17 +779,27 @@ module.exports = function normalizeComponent (
                 'background-color': this.settings.color.lineColor
             };
         },
+        labelColor: function labelColor() {
+            if (!this.settings.hasError) {
+                return this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor;
+            } else {
+                return this.settings.color.errorColor;
+            }
+        },
         activeLabelStyle: function activeLabelStyle() {
             return {
                 top: this.settings.labelOffset.top + 'px',
                 left: this.settings.labelOffset.left + 'px',
-                color: this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor
+                color: this.labelColor
             };
         },
         inputContainerStyle: function inputContainerStyle() {
             return {
                 height: this.settings.height + 'px'
             };
+        },
+        settings: function settings() {
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, this.defaultSettings, this.config);
         }
     },
     methods: {
@@ -793,6 +807,7 @@ module.exports = function normalizeComponent (
             this.formElement.value = '';
             this.hasContent = false;
             this.hasFocus = false;
+            this.$emit('clear');
         },
         focus: function focus(event) {
             this.hasFocus = true;
@@ -807,9 +822,6 @@ module.exports = function normalizeComponent (
             this.hasFocus = false;
             this.$emit('blur');
         }
-    },
-    created: function created() {
-        this.settings = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, this.defaultConfig, this.config);
     },
     mounted: function mounted() {
         this.formElement = this.$refs['input-container'].querySelector('input, select');
@@ -826,8 +838,11 @@ module.exports = function normalizeComponent (
     },
     data: function data() {
         return {
-            settings: {},
-            defaultConfig: {
+            defaultSettings: {
+                classes: {
+                    error: 'has-error'
+                },
+                hasError: false,
                 height: 64,
                 hasClearButton: true,
                 line: true,
@@ -839,6 +854,7 @@ module.exports = function normalizeComponent (
                 color: {
                     focusColor: '#128CED',
                     lineColor: '#128CED',
+                    errorColor: '#ff0000',
                     blurredColor: 'rgba(3, 23, 40, 0.34)'
                 }
             },

@@ -40,11 +40,15 @@
                 return false;
             },
             containerClasses() {
-                return {
+                let classes = {
                     'has-line': this.settings.line,
                     'input__container--focus': this.hasFocus,
                     'input__container--content': this.hasContent
+                };
+                if (this.settings.hasError) {
+                    classes[this.settings.classes.error] = true;
                 }
+                return classes;
             },
             labelName() {
                 if (this.config.name !== undefined) {
@@ -57,17 +61,27 @@
                     'background-color': this.settings.color.lineColor
                 }
             },
+            labelColor() {
+                if (!this.settings.hasError) {
+                    return this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor
+                } else {
+                    return this.settings.color.errorColor;
+                }
+            },
             activeLabelStyle() {
                 return {
                     top: this.settings.labelOffset.top + 'px',
                     left: this.settings.labelOffset.left + 'px',
-                    color: this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor
+                    color: this.labelColor
                 }
             },
             inputContainerStyle() {
                 return {
                     height: this.settings.height + 'px'
                 }
+            },
+            settings() {
+                return Object.assign({}, this.defaultSettings, this.config);
             }
         },
         methods: {
@@ -75,6 +89,7 @@
                 this.formElement.value = '';
                 this.hasContent = false;
                 this.hasFocus = false;
+                this.$emit('clear');
             },
             focus(event) {
                 this.hasFocus = true;
@@ -89,9 +104,6 @@
                 this.hasFocus = false;
                 this.$emit('blur');
             }
-        },
-        created() {
-            this.settings = Object.assign({}, this.defaultConfig, this.config);
         },
         mounted() {
             this.formElement = this.$refs['input-container'].querySelector('input, select');
@@ -108,8 +120,11 @@
         },
         data () {
             return {
-                settings: {},
-                defaultConfig: {
+                defaultSettings: {
+                    classes: {
+                        error: 'has-error'
+                    },
+                    hasError: false,
                     height: 64,
                     hasClearButton: true,
                     line: true,
@@ -121,6 +136,7 @@
                     color: {
                         focusColor: '#128CED',
                         lineColor: '#128CED',
+                        errorColor: '#ff0000',
                         blurredColor: 'rgba(3, 23, 40, 0.34)'
                     }
                 },

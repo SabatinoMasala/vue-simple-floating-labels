@@ -19,14 +19,15 @@
                         </FloatingLabel>
                     </div>
                     <div class="row" style="margin: 10px;">
-                        <CustomFloatingLabel :config="{label: 'Custom Component', name: 'custom', line: false, scale: false}">
-                            <input name="custom" type="text">
+                        <CustomFloatingLabel :config="{label: 'Wrapper Component', name: 'wrapper', line: false, scale: false}">
+                            <input name="wrapper" type="text">
                         </CustomFloatingLabel>
                     </div>
                     <div class="row" style="margin: 10px;">
-                        <CustomFloatingLabel :config="{label: 'Custom Component', name: 'custom', line: false, scale: false, height: 50, labelOffset: {top: 3, left: 8}}">
-                            <input name="custom" type="text">
+                        <CustomFloatingLabel :config="{label: 'Error example', name: 'error', line: false, scale: false, height: 50, labelOffset: {top: 3, left: 8}, classes: {error: 'has-error'}, hasError: hasError, hasClearButton: false}">
+                            <input name="error" type="text" v-model="value">
                         </CustomFloatingLabel>
+                        <small v-if="hasError" style="color: #f00; font-weight: bold">This field contains an error.</small>
                     </div>
                 </form>
             </div>
@@ -41,6 +42,16 @@
         components: {
             CustomFloatingLabel,
             FloatingLabel
+        },
+        computed: {
+            hasError() {
+                return this.value !== '';
+            }
+        },
+        data() {
+            return {
+                value: ''
+            }
         }
     }
 </script>
