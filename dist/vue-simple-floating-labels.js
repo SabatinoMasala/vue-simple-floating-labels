@@ -775,8 +775,12 @@ module.exports = function normalizeComponent (
             return this.config.label.toLowerCase();
         },
         accessibilityStyle: function accessibilityStyle() {
+            var color = this.settings.color.lineColor;
+            if (this.settings.hasError) {
+                color = this.settings.color.errorColor;
+            }
             return {
-                'background-color': this.settings.color.lineColor
+                'background-color': color
             };
         },
         labelColor: function labelColor() {
