@@ -94,10 +94,17 @@
             this.settings = Object.assign({}, this.defaultConfig, this.config);
         },
         mounted() {
-            this.formElement = this.$refs['input-container'].querySelector('input');
-            this.formElement.addEventListener('input', this.input);
-            this.formElement.addEventListener('blur', this.blur);
-            this.formElement.addEventListener('focus', this.focus);
+            this.formElement = this.$refs['input-container'].querySelector('input, select');
+            if (this.formElement) {
+                this.formElement.addEventListener('input', this.input);
+                this.formElement.addEventListener('blur', this.blur);
+                this.formElement.addEventListener('focus', this.focus);
+                if (this.formElement.type === 'select-one') {
+                    this.hasContent = true;
+                    this.settings.scale = false;
+                    this.settings.hasClearButton = false;
+                }
+            }
         },
         data () {
             return {
