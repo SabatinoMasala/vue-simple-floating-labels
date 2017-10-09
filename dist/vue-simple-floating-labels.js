@@ -270,7 +270,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.input__container[data-v-19d0ca9f] {\n  position: relative;\n  padding: 0 8px;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.input__container.has-line[data-v-19d0ca9f]:after, .input__container.has-line .character-counter-container[data-v-19d0ca9f]:after {\n    content: '';\n    position: absolute;\n    display: inline-block;\n    top: auto;\n    left: 8px;\n    right: 8px;\n    height: 1px;\n    background-color: #E4E7E9;\n    z-index: 3;\n    bottom: 0;\n}\n.input__container + .input__container[data-v-19d0ca9f]:before {\n    display: none;\n}\n.input__container.input__container--focus .accessibility__icon[data-v-19d0ca9f] {\n    -webkit-transform: scaleX(1);\n            transform: scaleX(1);\n}\n.input__container.input__container--content .character-counter-container[data-v-19d0ca9f] {\n    height: 32px;\n}\n.input__container.input__container--content label.label__placeholder[data-v-19d0ca9f] {\n    opacity: 0;\n}\n.input__container.input__container--content .label__active[data-v-19d0ca9f] {\n    opacity: 1;\n}\n.input__container.input__container--content .label__active.label__active--canscale[data-v-19d0ca9f] {\n      -webkit-transform: translate3d(0, 0px, 0) scale(0.85);\n              transform: translate3d(0, 0px, 0) scale(0.85);\n}\n.input__container.input__container--content input[data-v-19d0ca9f], .input__container.input__container--content .label__placeholder[data-v-19d0ca9f] {\n    -webkit-transform: translate3d(0, 6px, 0);\n            transform: translate3d(0, 6px, 0);\n}\n.input__container.input__container--focus.input__container--content label.label__active.label__active--canscale[data-v-19d0ca9f] {\n    opacity: 1;\n    -webkit-transform: translate3d(0, 0px, 0);\n            transform: translate3d(0, 0px, 0);\n}\n.input__container.input__container--focus.input__container--content label.label__placeholder[data-v-19d0ca9f] {\n    opacity: 0;\n}\n.input__container.input__container--focus.input__container--content .clear__icon[data-v-19d0ca9f] {\n    opacity: 1;\n}\n.input__container.input__container--focus.input__container--content .accessibility__icon[data-v-19d0ca9f] {\n    -webkit-transform: scaleX(1);\n            transform: scaleX(1);\n}\n.input__container.input__container--focus.input__container--content .carret__icon--down svg path[data-v-19d0ca9f] {\n    fill: #128CED;\n}\n.icon[data-v-19d0ca9f] {\n  opacity: 0;\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  right: 16px;\n  top: 50%;\n  z-index: 1;\n  -webkit-transform: translate3d(0, -50%, 0);\n          transform: translate3d(0, -50%, 0);\n}\n.accessibility__icon[data-v-19d0ca9f] {\n  position: absolute;\n  height: 2px;\n  left: 8px;\n  right: 8px;\n  bottom: 0;\n  z-index: 9;\n  border-radius: 100px;\n  background-color: #128CED;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n  -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n.clear__icon[data-v-19d0ca9f] {\n  cursor: pointer;\n  background-color: rgba(3, 23, 40, 0.24);\n  font-weight: bold;\n  border-radius: 100px;\n  z-index: 1;\n  color: white;\n  text-align: center;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\ninput[data-v-19d0ca9f] {\n  font-size: 16px;\n  color: rgba(3, 23, 40, 0.64);\n  line-height: 24px;\n}\ninput[data-v-19d0ca9f]:focus {\n  outline: none;\n}\ninput[data-v-19d0ca9f] {\n  height: 64px;\n  font-size: 16px;\n  line-height: 32px;\n  padding: 0 0;\n  border: 0;\n  display: block;\n  width: 100%;\n  position: relative;\n  background-color: transparent;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\nlabel[data-v-19d0ca9f] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\nlabel.label__placeholder[data-v-19d0ca9f] {\n    top: 20px;\n    color: rgba(3, 23, 40, 0.4);\n    left: 8px;\n}\nlabel.label__active[data-v-19d0ca9f] {\n    font-size: 13px;\n    color: rgba(3, 23, 40, 0.34);\n    font-weight: 500;\n    line-height: 16px;\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3px, 0);\n            transform: translate3d(0, 3px, 0);\n    -webkit-transform-origin: 0 0;\n            transform-origin: 0 0;\n}\nlabel.label__character-counter[data-v-19d0ca9f] {\n    font-size: 13px;\n    line-height: 16px;\n    color: rgba(3, 23, 40, 0.34);\n    position: absolute;\n    left: 0;\n    bottom: -14px;\n    display: inline-block;\n    top: auto;\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.input__container[data-v-19d0ca9f] {\n  position: relative;\n  padding: 0 8px;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.input__container .slot-container[data-v-19d0ca9f] {\n    height: 100%;\n}\n.input__container .slot-container input[data-v-19d0ca9f] {\n      height: 100%;\n      font-size: 16px;\n      padding: 0 0;\n      border: 0;\n      display: block;\n      width: 100%;\n      position: relative;\n      background-color: transparent;\n      -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n      transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.input__container.has-line[data-v-19d0ca9f]:after, .input__container.has-line .character-counter-container[data-v-19d0ca9f]:after {\n    content: '';\n    position: absolute;\n    display: inline-block;\n    top: auto;\n    left: 8px;\n    right: 8px;\n    height: 1px;\n    background-color: #E4E7E9;\n    z-index: 3;\n    bottom: 0;\n}\n.input__container + .input__container[data-v-19d0ca9f]:before {\n    display: none;\n}\n.input__container.input__container--focus .accessibility__icon[data-v-19d0ca9f] {\n    -webkit-transform: scaleX(1);\n            transform: scaleX(1);\n}\n.input__container.input__container--content .character-counter-container[data-v-19d0ca9f] {\n    height: 32px;\n}\n.input__container.input__container--content label.label__placeholder[data-v-19d0ca9f] {\n    opacity: 0;\n}\n.input__container.input__container--content .label__active[data-v-19d0ca9f] {\n    opacity: 1;\n}\n.input__container.input__container--content .label__active.label__active--canscale[data-v-19d0ca9f] {\n      -webkit-transform: translate3d(0, 0px, 0) scale(0.85);\n              transform: translate3d(0, 0px, 0) scale(0.85);\n}\n.input__container.input__container--content input[data-v-19d0ca9f], .input__container.input__container--content .label__placeholder[data-v-19d0ca9f] {\n    -webkit-transform: translate3d(0, 6px, 0);\n            transform: translate3d(0, 6px, 0);\n}\n.input__container.input__container--focus.input__container--content label.label__active.label__active--canscale[data-v-19d0ca9f] {\n    opacity: 1;\n    -webkit-transform: translate3d(0, 0px, 0);\n            transform: translate3d(0, 0px, 0);\n}\n.input__container.input__container--focus.input__container--content label.label__placeholder[data-v-19d0ca9f] {\n    opacity: 0;\n}\n.input__container.input__container--focus.input__container--content .clear__icon[data-v-19d0ca9f] {\n    opacity: 1;\n}\n.input__container.input__container--focus.input__container--content .accessibility__icon[data-v-19d0ca9f] {\n    -webkit-transform: scaleX(1);\n            transform: scaleX(1);\n}\n.input__container.input__container--focus.input__container--content .carret__icon--down svg path[data-v-19d0ca9f] {\n    fill: #128CED;\n}\n.icon[data-v-19d0ca9f] {\n  opacity: 0;\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  right: 16px;\n  top: 50%;\n  z-index: 1;\n  -webkit-transform: translate3d(0, -50%, 0);\n          transform: translate3d(0, -50%, 0);\n}\n.accessibility__icon[data-v-19d0ca9f] {\n  position: absolute;\n  height: 2px;\n  left: 8px;\n  right: 8px;\n  bottom: 0;\n  z-index: 9;\n  border-radius: 100px;\n  background-color: #128CED;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n  -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n.clear__icon[data-v-19d0ca9f] {\n  cursor: pointer;\n  background-color: rgba(3, 23, 40, 0.24);\n  font-weight: bold;\n  border-radius: 100px;\n  z-index: 1;\n  color: white;\n  text-align: center;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\ninput[data-v-19d0ca9f] {\n  font-size: 16px;\n  color: rgba(3, 23, 40, 0.64);\n  line-height: 24px;\n}\ninput[data-v-19d0ca9f]:focus {\n  outline: none;\n}\nlabel[data-v-19d0ca9f] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\nlabel.label__placeholder[data-v-19d0ca9f] {\n    top: 50%;\n    -webkit-transform: translate(0, -50%);\n            transform: translate(0, -50%);\n    color: rgba(3, 23, 40, 0.4);\n    left: 8px;\n}\nlabel.label__active[data-v-19d0ca9f] {\n    font-size: 13px;\n    color: rgba(3, 23, 40, 0.34);\n    font-weight: 500;\n    line-height: 16px;\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3px, 0);\n            transform: translate3d(0, 3px, 0);\n    -webkit-transform-origin: 0 0;\n            transform-origin: 0 0;\n}\nlabel.label__character-counter[data-v-19d0ca9f] {\n    font-size: 13px;\n    line-height: 16px;\n    color: rgba(3, 23, 40, 0.34);\n    position: absolute;\n    left: 0;\n    bottom: -14px;\n    display: inline-block;\n    top: auto;\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -777,9 +777,14 @@ module.exports = function normalizeComponent (
         },
         activeLabelStyle: function activeLabelStyle() {
             return {
-                top: this.settings.labelOffset.top,
-                left: this.settings.labelOffset.left,
+                top: this.settings.labelOffset.top + 'px',
+                left: this.settings.labelOffset.left + 'px',
                 color: this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor
+            };
+        },
+        inputContainerStyle: function inputContainerStyle() {
+            return {
+                height: this.settings.height + 'px'
             };
         }
     },
@@ -816,12 +821,13 @@ module.exports = function normalizeComponent (
         return {
             settings: {},
             defaultConfig: {
+                height: 64,
                 hasClearButton: true,
                 line: true,
                 scale: true,
                 labelOffset: {
-                    top: '10px',
-                    left: '8px'
+                    top: 10,
+                    left: 8
                 },
                 color: {
                     focusColor: '#128CED',
@@ -1295,7 +1301,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "input__container", class: _vm.containerClasses },
+    {
+      staticClass: "input__container",
+      class: _vm.containerClasses,
+      style: _vm.inputContainerStyle
+    },
     [
       _vm.settings.hasClearButton
         ? _c(
@@ -1351,7 +1361,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { ref: "input-container", staticClass: "input" },
+        { ref: "input-container", staticClass: "slot-container" },
         [_vm._t("default")],
         2
       ),
