@@ -2,6 +2,8 @@
 
 Simple floating labels as a Vue component without jQuery.
 
+[Check out the demo](https://sabatinomasala.github.io/vue-simple-floating-labels/)
+
 ## Getting started
 
 Pull in the package:
