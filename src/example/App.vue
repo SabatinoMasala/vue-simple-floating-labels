@@ -23,6 +23,11 @@
                             <input name="custom" type="text">
                         </CustomFloatingLabel>
                     </div>
+                    <div class="row" style="margin: 10px;">
+                        <CustomFloatingLabel :config="{label: 'Custom Component', name: 'custom', line: false, scale: false, height: 50, labelOffset: {top: 3, left: 8}}">
+                            <input name="custom" type="text">
+                        </CustomFloatingLabel>
+                    </div>
                 </form>
             </div>
         </div>

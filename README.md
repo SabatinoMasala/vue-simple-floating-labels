@@ -33,6 +33,9 @@ Use in your template:
 ### hasClearButton (default `true`)
 Input field should have a clear button.
 
+### hasClearButton (default `64`)
+The input height.
+
 ### Line (default `true`)
 Input field should have a line below it (for accessibility reasons)
 
@@ -45,8 +48,8 @@ Set the top and left property of the label.
 **Defaults:**
 ```
 {
-    top: '10px',
-    left: '8px'
+    top: 10,
+    left: 8
 }
 ``` 
 

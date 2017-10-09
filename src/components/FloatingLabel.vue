@@ -1,5 +1,5 @@
 <template>
-    <div class="input__container" :class="containerClasses">
+    <div class="input__container" :class="containerClasses" :style="inputContainerStyle">
         <div class="icon clear__icon" @mousedown.stop.prevent="clear" v-if="settings.hasClearButton">
             <svg width="10px" height="11px" viewBox="3 3 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs></defs>
@@ -7,7 +7,7 @@
             </svg>
         </div>
         <div class="accessibility__icon" :style="accessibilityStyle" v-if="settings.line"></div>
-        <div class="input" ref="input-container">
+        <div class="slot-container" ref="input-container">
             <slot
                     v-model="value"
                     @focus="focus"
@@ -59,9 +59,14 @@
             },
             activeLabelStyle() {
                 return {
-                    top: this.settings.labelOffset.top,
-                    left: this.settings.labelOffset.left,
+                    top: this.settings.labelOffset.top + 'px',
+                    left: this.settings.labelOffset.left + 'px',
                     color: this.hasFocus ? this.settings.color.focusColor : this.settings.color.blurredColor
+                }
+            },
+            inputContainerStyle() {
+                return {
+                    height: this.settings.height + 'px'
                 }
             }
         },
@@ -98,12 +103,13 @@
             return {
                 settings: {},
                 defaultConfig: {
+                    height: 64,
                     hasClearButton: true,
                     line: true,
                     scale: true,
                     labelOffset: {
-                        top: '10px',
-                        left: '8px'
+                        top: 10,
+                        left: 8
                     },
                     color: {
                         focusColor: '#128CED',
@@ -124,6 +130,20 @@
         position: relative;
         padding: 0 8px;
         transition: 0.2s cubic-bezier($easeInOutCubic);
+        .slot-container {
+            height: 100%;
+            input {
+                height: 100%;
+                font-size: 16px;
+                padding: 0 0;
+                border: 0;
+                display: block;
+                width: 100%;
+                position: relative;
+                background-color: transparent;
+                transition: 0.2s cubic-bezier($easeInOutCubic);
+            }
+        }
 
         &.has-line{
             &:after, .character-counter-container:after {
@@ -235,18 +255,6 @@
     input:focus{
         outline: none;
     }
-    input {
-        height: 64px;
-        font-size: 16px;
-        line-height: 32px;
-        padding: 0 0;
-        border: 0;
-        display: block;
-        width: 100%;
-        position: relative;
-        background-color: transparent;
-        transition: 0.2s cubic-bezier($easeInOutCubic);
-    }
     label {
         position: absolute;
         top: 0;
@@ -256,7 +264,8 @@
         transition: 0.2s cubic-bezier($easeInOutCubic);
 
         &.label__placeholder {
-            top: 20px;
+            top: 50%;
+            transform: translate(0, -50%);
             color: rgba(3,23,40,0.40);
             left: 8px;
         }
