@@ -7,12 +7,12 @@ Simple floating labels as a Vue component without jQuery.
 ## Getting started
 
 Pull in the package:
-``` 
+``` js
 yarn add vue-simple-floating-labels
 ```
 
 Import the component:
-```
+```js
 import FloatingLabel from 'vue-simple-floating-labels'
 export default {
     components: {
@@ -21,7 +21,7 @@ export default {
 }
 ```
 Use in your template:
-```
+```vue
 <FloatingLabel
     :config="{label: 'Example'}">
     <input name="example" type="text">
@@ -36,13 +36,13 @@ Input field should have a clear button.
 ### hasClearButton (default `64`)
 The input height.
 
-### Line (default `true`)
+### line (default `true`)
 Input field should have a line below it (for accessibility reasons)
 
-### Scale (default `true`)
+### scale (default `true`)
 Turn scale animation on or off
 
-### HasError (default `false`)
+### hasError (default `false`)
 Whether or not to apply the error class
 
 ### labelOffset
@@ -55,7 +55,7 @@ Set the top and left property of the label.
     left: 8
 }
 ``` 
-### Classes
+### classes
 Custom classes.
 
 **Defaults:**
