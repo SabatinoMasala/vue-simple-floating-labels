@@ -33,7 +33,7 @@ Use in your template:
 ### hasClearButton (default `true`)
 Input field should have a clear button.
 
-### hasClearButton (default `64`)
+### height (default `64`)
 The input height.
 
 ### line (default `true`)
