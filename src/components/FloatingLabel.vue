@@ -115,6 +115,7 @@
                 this.formElement.addEventListener('input', this.input);
                 this.formElement.addEventListener('blur', this.blur);
                 this.formElement.addEventListener('focus', this.focus);
+                this.hasContent = !!this.formElement.value;
                 if (this.formElement.type === 'select-one') {
                     this.hasContent = true;
                     this.settings.scale = false;
