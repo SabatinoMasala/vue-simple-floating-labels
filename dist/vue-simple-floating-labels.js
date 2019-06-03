@@ -251,7 +251,7 @@ module.exports = function (exec) {
             this.formElement.addEventListener('blur', this.blur);
             this.formElement.addEventListener('focus', this.focus);
             this.hasContent = !!this.formElement.value;
-            if (this.formElement.type === 'select-one') {
+            if (this.formElement.type === 'select-one' || this.config.value !== '') {
                 this.hasContent = true;
                 this.settings.scale = false;
                 this.settings.hasClearButton = false;

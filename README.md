@@ -54,7 +54,7 @@ Set the top and left property of the label.
     top: 10,
     left: 8
 }
-``` 
+```
 ### classes
 Custom classes.
 
@@ -63,7 +63,7 @@ Custom classes.
 {
     error: 'has-error'
 }
-``` 
+```
 
 ### color
 Specify the focusColor, lineColor and blurredColor.
