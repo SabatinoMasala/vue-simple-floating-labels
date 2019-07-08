@@ -148,6 +148,16 @@
                 hasFocus: false,
                 hasContent: false
             }
+        },
+        watch: {
+            config: {
+                deep: true,
+                handler(val) {
+                    if (this.config.value !== '') {
+                        this.hasContent = true;
+                    }
+                }
+            }
         }
     }
 </script>

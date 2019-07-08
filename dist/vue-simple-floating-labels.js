@@ -283,6 +283,17 @@ module.exports = function (exec) {
             hasFocus: false,
             hasContent: false
         };
+    },
+
+    watch: {
+        config: {
+            deep: true,
+            handler: function handler(val) {
+                if (this.config.value !== '') {
+                    this.hasContent = true;
+                }
+            }
+        }
     }
 });
 
