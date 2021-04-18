@@ -115,7 +115,8 @@
                 this.formElement.addEventListener('input', this.input);
                 this.formElement.addEventListener('blur', this.blur);
                 this.formElement.addEventListener('focus', this.focus);
-                if (this.formElement.type === 'select-one') {
+                this.hasContent = !!this.formElement.value;
+                if (this.formElement.type === 'select-one' || this.config.value !== '') {
                     this.hasContent = true;
                     this.settings.scale = false;
                     this.settings.hasClearButton = false;
@@ -146,6 +147,16 @@
                 },
                 hasFocus: false,
                 hasContent: false
+            }
+        },
+        watch: {
+            config: {
+                deep: true,
+                handler(val) {
+                    if (this.config.value !== '') {
+                        this.hasContent = true;
+                    }
+                }
             }
         }
     }
